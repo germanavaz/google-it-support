@@ -1,0 +1,119 @@
+Week 6 - Troubleshooting and the Future of Networking
+
+-- Verifying Connectivity
+
+- Traceroute
+A utility that lets you discover the path between two nodes, and gives you information about each hop along the way.
+
+- Testing Port Connectivity
+netcat- Linux/MacOS (commands: nc - host, -z, -v)
+Test-NetConnection- Windows (commands: Test-NetConnection -port) 
+
+-- Digging into DNS
+
+- Name Resolution Tools
+command nslookup (+ host name) - o resultado mostra qual servidor foi utilizado para fazer a solicitação e o resultado da resolução. 
+Ex: saber o IP do twitter.com > $ nslookup twitter.com > o registro A seria retornado.
+set type=
+set debug
+
+- Public DNS Servers
+An ISP almost always gives you access to a recursive name server as part of the service it provides. 
+Public DNS Servers: name servers specifically set up so that anyone can use them, for free.
+Os endereços IP dos servidores DNS públicos da Level 3 variam de 4.2.2.1 a 4.2.2.6.
+Google public DNS - 8.8.8.8 e 8.8.4.4
+Most public DNS servers are available globally through anycast.
+Always make sure the name server is run by a reputable company, and try to use the name servers provides by your ISP outside of troubleshotting scenarios. 
+
+- DNS Registration and Expiration
+Registrar: an organization responsible for assigning individual domain names to other organizations or individuals.
+
+- Hosts Files
+The original way that numbered network addresses were correlated  with words was through hosts files. 
+Hosts file: a flat file that contains, on each line, a network address followed by the host name it can be referred to as. 
+Loopback address: a way of sending network traffic to yourself.
+O IP de loopback do UPv4 é 127.0.0.1
+Almost every hosts file in existence will, in the very least, contain a line that reads 127.0.0.1 localhost, most likely followed by ::1 localhost, where ::1 is the loopback address for IPv6. 
+Hosts files are a popular way for computer viruses to disrupt and redirect users' traffic. 
+
+-- The Cloud
+
+- What is The Cloud?
+Cloud computing: a technological approach where computing resources are provisioned in a shareable way, so that lots of users get what they need, when they need it. 
+Hardware virtualization: core concept of cloud computing technologic work. 
+Virtualization: a single physical machine, called a host, could run many individual virtual instances, calles guests. 
+Hypervisor: a piece of software that runs and manages virtual machines, while also offering these guests a virtual operating platforma that's indistinguishable from actual hardware. 
+Public cloud: a larger cluster of machines run by another company.
+Private cloud: used by a single large corpotation and generally physically hosted on its owm premises.
+Hybrid cloud: a term used to describe situations where companes might rin things like their most sensitive proprietary technologies on a private cloud, while entrusting ther less-sensitive servers to a public cloud.
+Cloud computing: a new model in computing where large clusters of machines let us use the total resources available in a better way.
+
+- Everything as a Service
+X as a Service
+Infrastructure as a Service (IaaS): you shouldn't have to worry about building your own network or you own servers.
+Platform as a Service (PaaS): a subset of cloud computing where a platform is provided for customers to run their services.
+Software as a Service (SaaS): a way of licensing the use of software to others while keeping that software centrally hosted and managed.
+
+- Cloud Storage
+Hypervisor: a piece of software that runs and manages virtual machines.
+
+
+-- IPv6
+
+- IPv6 Addressing and Subnetting
+IPv5 was an experimental protocol that introduced the concept of connections.
+A maior diferença do IPv4 (32 bits) e IPv6 (128 bits) é o número de bits reservados para um endereço.
+Undecillion
+Os endereços IPv6 geralmente sao formados por 8 gruos de 16 bits cada. Tem um metódo de notação que nos permite destrinchar ainda mais.  
+Todo endereço IPv6 que começa com 2001:0db8 foi reservado para documentação e ensino ou para livros e cursos como este.
+Existem duas regras para encurtar um endereço IPv6:
+1- Remover os zeros iniciais de um grupo;
+2- Os grupos de números consecutivos compostos somente por zeros podem dar lugar a 2 sinais de dois pontos (isso só pode acontecer uma vez para um endereço)
+Ex: 2001:0db8:0000:0000:0000:ff00:0012:3456 
+Regra1 vira > 2001:db8:0:0:0:ff00:12:3456
+Regra2 vira > 2001:db8::ff00:12:3456
+
+Todo endereço que começa com FF00:: é designado para multicast (a way of addressing groups of hosts all at once).
+FE80:: - link local unicast (allow for local network segment communicantions and are configured based upon a host's MAC address)
+
+- IPv6 Headers 
+Version field: a 4-bit field that defines what version of IP is in use.
+Traffic class field: an 8-but field that defines the type of traffic contained within the IP datagram, and allows for different classes of traffic to receive different priorities. 
+Flow label field: a 20-bit field that's used in conjunction with the traffic class field for routers to make decisions about the quality of service level for a specific datagram.
+Payload length field: a 16-bit field that defines how long the data payload section of the datagram is. 
+Next header field: a unique concept to IPv6
+Hop limit field: an 8-bit field that's identical in purpose to the TTL field in an IPv4 header. 
+Source Address 
+Destination Address
+Data Payload Field
+
+- IPv6 e IPv4 Harmony
+IPv4 mapped address space
+IPv6 tunnels: servers take incoming IPv6 traffic and encapsulate it within traditional IPv4 datagram.
+IPv6 tunnel broker: companies that provide IPv6 tunneling endpoints for you, so you don't have to introduce additional equipment to your network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
