@@ -1,0 +1,17 @@
+Week 2 - Users, Administrators and Groups
+
+--- Users and Groups ---
+
+Standard user: one who given access to a machine but has restricted access to do things like install software or change certain settings.
+Administrator (admin): a user that has complete control over a machine.
+
+Windowns:
+Get-LocalUsers
+Get-LocalGroup
+Get-LocalGroupMember Administrators
+
+Linux:
+sudo cat /etc/sudoers
+cat /etc/password/
+
+

@@ -1,0 +1,75 @@
+Week 1 - Navigating the System
+
+--- Introduction to Operating System and Becoming a Power User ---
+
+-- Basic Commands --
+
+-Lesson overview and practice tips- 
+Windows: GUI (graphical user interface) and CLI (command line interpreter)
+Linux: Command Line
+The command line interpreter in Linux is called a shell, and the language that we'll use to interact with this shell is called Bash.
+
+-List Directories in a GUI-
+Paths (localizações): local de arquivos e diretórios. Ex: c:/Users/Cindy/Desktop
+In windows, filesystems are assigned to drive letters, wich look like C:, or D:, or X:.
+The root directoruy (diretório-raiz) of C: would be written C:\, and the root directory of X: would be written X:\.
+Subdirectories are separated by backslashes (\), unlike linux, which uses forward slashes (/)
+
+-Windowns: List Directories in CLI-
+The C: drive root folder is what we call a parent directory and the contents inside are considered child directories.
+Powershell:
+
+ls c:\ - list evertyhing
+Get-Help ls - descrição dos parâmetros do comando "ls"
+Get-Help ls -Full 
+ls -Force C:\ - ver os arquivos ocultos
+
+-Linux: List Directories-
+Root directory - /
+/home/cindy/Desktop
+
+ls /
+--help - para ver quais flags existem para aquele comando
+
+-Windows: Changing Directories in the CLI-
+An absolute path is one tht starts from the main directory. A relative path is the path from your current directory.
+Prompt: mostra em qual diretório você está no momento.
+
+pwd - informa em qual diretório você está atualmente. 
+cd - para alterar o diretório que você está
+cd .. - volta uma 
+cd ~ - atalho para a localização do seu diretório principal
+
+-Linux: Changing Directories in the Bash-
+pwd 
+cd
+cd ..
+cd ~
+
+-Windows: make directories in the CLI-
+mkdir - criar diretório
+`- quando for escrever um nome com espaço
+Ex: my_cool_folder - my` cool` folder 'my cool folder'
+
+-Linux: make directories in Bash-
+mkdir 
+\- quando for escrever um nome com espaço
+Ex: my_cool_folder - my\ cool\ folder 'my cool folder'
+
+-Windows: Command History-
+history - lista dos comandos que usou anteriormente
+ctrl+R
+clear - limpar a tela
+
+-Linux: Command History-
+history
+ctrl-R
+clear
+
+
+
+
+
+
+
+
